@@ -68,3 +68,20 @@
     @apply bg-background text-foreground;
   }
 }
+/* Accessibility styles */
+.skip-link {
+  @apply sr-only focus:not-sr-only;
+  @apply fixed top-0 left-0 z-50;
+  @apply bg-black text-white px-4 py-2;
+}
+
+/* Enhance focus visibility */
+a:focus,
+button:focus {
+  @apply outline-2 outline-blue-500 outline-offset-2;
+}
+
+/* Screen reader only utility if not already present */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
